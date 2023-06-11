@@ -8,6 +8,13 @@
     5. utilizzare v-bind sulla prima slide, su titolo e sul testo
     6. inserire un v-for per ciclare le trumbs
     7. inserire l'operatore ternario per il controllo della classe active
-    8.inserire nella sezione methods le funzioni dei pulsanti
+    8. inserire nella sezione methods le funzioni dei pulsanti
+    9. inserimento degli eventi click nel dom tag pulsanti
+
+#### BONUS 1: Al click su una trumbs, visualizza l'immagine corrispondente
+    1 - inserisci una funzione che prende il valore della trumbs
+    2 - collegare la funzione al dom 
+
+
 
 

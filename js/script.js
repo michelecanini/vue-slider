@@ -10,7 +10,7 @@ createApp({
         data(){ 
             return{
 
-                //variabile della slide attiva
+                //VARIABILE DELLA SLIDE ATTIVA
                 activeSlide: 0,
 
                 //ARRAY DI OGGETTI CON IMMAGINI TITOLI E TESTI
@@ -62,6 +62,9 @@ createApp({
                     if(this.activeSlide < 0){
                         this.activeSlide = this.slider.length - 1;
                     }
+                },
+                clickedActiveSlide(index){
+                    this.activeSlide = index;
 
                 }
                 

@@ -32,7 +32,7 @@
                     <div class="thumbs">
                         <div class="prev" @click="prevSlide"></div>
                         <div class="next" @click="nextSlide"></div>
-                        <div class="thumb" v-for="(slide, index) in slider" v-bind:class="activeSlide === index ? 'active' : ''">
+                        <div class="thumb" v-for="(slide, index) in slider" v-bind:class="activeSlide === index ? 'active' : ''" @click="clickedActiveSlide(index)">
                             <img v-bind:src="slide.image" alt="Svezia" />
                         </div>
                         </div>
