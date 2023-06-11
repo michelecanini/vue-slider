@@ -15,6 +15,11 @@
     1 - inserisci una funzione che prende il valore della trumbs
     2 - collegare la funzione al dom 
 
+#### BONUS 2: Applicare l'autoplay alle slide ogni 3 secondi deve cambiare immagine automaticamente
+    1 - inserisci una variabile in data con valore null
+    2 - crea una funzione con setInterval settata a 3 secondi in methods
+    3 - utilizziamo il metodo created di vue per chiamare la funzione
+
 
 
 

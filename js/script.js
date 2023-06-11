@@ -12,6 +12,8 @@ createApp({
 
                 //VARIABILE DELLA SLIDE ATTIVA
                 activeSlide: 0,
+                //VARIABILE AUTOPLAY
+                autoplaySlide: null,
 
                 //ARRAY DI OGGETTI CON IMMAGINI TITOLI E TESTI
                     slider: [ 
@@ -41,14 +43,18 @@ createApp({
                             text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                         }
                     ],
-
-                    // VARIABILE DELL'IMMAGINE ATTVA SU PRIMO VALORE 0 
-                    activeImages: 0
-                }
-                    
+                }      
             },
+
+            // FUNZIONE CREATED MEDOTO VUE
+            created() {
+                this.autoplaySlider();
+            }, 
+
             // SEZIONE METHODS PER LE FUNZIONI (PULSANTI NEXT E PREV)   
             methods: {
+
+                // FUNZIONE NEXT SLIDE
                 nextSlide(){
                     this.activeSlide++;
 
@@ -56,6 +62,8 @@ createApp({
                         this.activeSlide = 0;
                     }
                 },
+
+                // FUNZIONE PREV SLIDE
                 prevSlide(){
                     this.activeSlide--;
 
@@ -63,9 +71,17 @@ createApp({
                         this.activeSlide = this.slider.length - 1;
                     }
                 },
+
+                // FUNZIONE CLICK SULLA SINGOLA SLIDE
                 clickedActiveSlide(index){
                     this.activeSlide = index;
+                },
 
+                // FUNZIONE AUTOPLAY CON INTERVALLO TEMPORALE A 3 SECONDI
+                autoplaySlider(){
+                    this.autoplay = setInterval(() => {
+                        this.nextSlide();
+                    }, 3000);
                 }
                 
             }
