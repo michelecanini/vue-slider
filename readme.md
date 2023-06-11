@@ -7,5 +7,7 @@
     4. crea una variabile in vue per la slide attiva
     5. utilizzare v-bind sulla prima slide, su titolo e sul testo
     6. inserire un v-for per ciclare le trumbs
-    
+    7. inserire l'operatore ternario per il controllo della classe active
+    8.inserire nella sezione methods le funzioni dei pulsanti
+
 

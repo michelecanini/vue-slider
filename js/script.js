@@ -42,13 +42,29 @@ createApp({
                         }
                     ],
 
+                    // VARIABILE DELL'IMMAGINE ATTVA SU PRIMO VALORE 0 
                     activeImages: 0
                 }
                     
             },
-                
+            // SEZIONE METHODS PER LE FUNZIONI (PULSANTI NEXT E PREV)   
             methods: {
+                nextSlide(){
+                    this.activeSlide++;
+
+                    if(this.activeSlide > this.slider.length - 1){
+                        this.activeSlide = 0;
+                    }
+                },
+                prevSlide(){
+                    this.activeSlide--;
+
+                    if(this.activeSlide < 0){
+                        this.activeSlide = this.slider.length - 1;
+                    }
+
+                }
                 
-           },
+            }
 
 }).mount('#app');
